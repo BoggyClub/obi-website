@@ -2,32 +2,35 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Video Wrapper */}
-      <video
-        autoPlay
-        loop
-        muted
-        className="absolute inset-0 h-full w-full object-cover"
-        src="/assets/background-feed.mp4"
-      />
-      
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/50" />
-
-      {/* Content */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center p-6 text-center text-white">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6">Rewrite Real Estate. Be the Operator.</h1>
-        <p className="text-xl md:text-2xl mb-10 max-w-2xl">Join a peer-to-peer marketplace that moves as fast as you do. View, stream, and trade in real-time.</p>
+    <section className="relative h-screen w-full flex items-center bg-black">
+      {/* Left side: Uber-style content */}
+      <div className="z-10 w-full md:w-1/2 p-12 md:pl-24">
+        <h1 className="text-6xl md:text-8xl font-black mb-8 leading-tight">
+          Real Estate, <br/>
+          In Motion.
+        </h1>
+        <p className="text-xl mb-12 text-gray-300">
+          Become an operator. Sign up to view, trade, and stream property in real-time.
+        </p>
         
-        <div className="flex flex-col md:flex-row gap-4">
-          <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-200 transition">
-            Become an Operator
+        <div className="flex flex-col gap-4">
+          <button className="bg-white text-black px-10 py-5 rounded-md text-xl font-bold hover:bg-gray-200 transition">
+            Sign up to ride
           </button>
-          <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition">
-            Explore Feed
-          </button>
+          <a href="https://play.google.com/store/apps/details?id=com.obirealestate.android" className="underline text-gray-400 hover:text-white">
+            Already have an account? Download the app
+          </a>
         </div>
+      </div>
+
+      {/* Right side: Visual teaser */}
+      <div className="absolute right-0 top-0 w-full md:w-3/5 h-full opacity-60">
+        <img 
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000" 
+          className="h-full w-full object-cover" 
+          alt="Real Estate"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent" />
       </div>
     </section>
   );
