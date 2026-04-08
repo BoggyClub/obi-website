@@ -5,11 +5,10 @@ const Hero = () => {
     <section className="hero-section flex items-center justify-between">
       <div className="max-w-2xl">
         <h1 className="text-6xl md:text-8xl font-black mb-6">
-          The Future of <br/>
-          Real Estate.
+          Real Estate, redefined.
         </h1>
         <p className="text-xl md:text-2xl text-gray-200 mb-10">
-          OBI is your open marketplace connecting real estate operators and viewers.
+          Peer-to-peer property transactions. List for free, sell faster, and join a marketplace designed for operators. 
         </p>
         
         <div className="cta-container">
